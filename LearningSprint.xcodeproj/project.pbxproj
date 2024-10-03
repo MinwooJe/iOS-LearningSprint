@@ -6,30 +6,27 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		5613C3492CAED2DA00E42FB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5613C3462CAED2DA00E42FB0 /* SceneDelegate.swift */; };
+		5613C34A2CAED2DA00E42FB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5613C3412CAED2DA00E42FB0 /* AppDelegate.swift */; };
+		5613C34B2CAED2DA00E42FB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5613C3472CAED2DA00E42FB0 /* ViewController.swift */; };
+		5613C34C2CAED2DA00E42FB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5613C3452CAED2DA00E42FB0 /* LaunchScreen.storyboard */; };
+		5613C34E2CAED2DA00E42FB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5613C3422CAED2DA00E42FB0 /* Assets.xcassets */; };
+		5613C3522CAED2F800E42FB0 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5613C3512CAED2F800E42FB0 /* ChatListViewController.swift */; };
+		5613C3562CAED40500E42FB0 /* ChatListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5613C3552CAED40500E42FB0 /* ChatListTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		5613C3412CAED2DA00E42FB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5613C3422CAED2DA00E42FB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5613C3432CAED2DA00E42FB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5613C3442CAED2DA00E42FB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5613C3462CAED2DA00E42FB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5613C3472CAED2DA00E42FB0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5613C3512CAED2F800E42FB0 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
+		5613C3552CAED40500E42FB0 /* ChatListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListTableViewCell.swift; sourceTree = "<group>"; };
 		5682684F2CAE8219000E364A /* LearningSprint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningSprint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		568268612CAE821B000E364A /* Exceptions for "LearningSprint" folder in "LearningSprint" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 5682684E2CAE8219000E364A /* LearningSprint */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		568268512CAE8219000E364A /* LearningSprint */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				568268612CAE821B000E364A /* Exceptions for "LearningSprint" folder in "LearningSprint" target */,
-			);
-			path = LearningSprint;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		5682684C2CAE8219000E364A /* Frameworks */ = {
@@ -42,10 +39,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5613C3482CAED2DA00E42FB0 /* LearningSprint */ = {
+			isa = PBXGroup;
+			children = (
+				5613C34F2CAED2DF00E42FB0 /* ChatListScene */,
+				5613C3412CAED2DA00E42FB0 /* AppDelegate.swift */,
+				5613C3422CAED2DA00E42FB0 /* Assets.xcassets */,
+				5613C3432CAED2DA00E42FB0 /* Info.plist */,
+				5613C3452CAED2DA00E42FB0 /* LaunchScreen.storyboard */,
+				5613C3462CAED2DA00E42FB0 /* SceneDelegate.swift */,
+				5613C3472CAED2DA00E42FB0 /* ViewController.swift */,
+			);
+			path = LearningSprint;
+			sourceTree = "<group>";
+		};
+		5613C34F2CAED2DF00E42FB0 /* ChatListScene */ = {
+			isa = PBXGroup;
+			children = (
+				5613C3512CAED2F800E42FB0 /* ChatListViewController.swift */,
+				5613C3552CAED40500E42FB0 /* ChatListTableViewCell.swift */,
+			);
+			path = ChatListScene;
+			sourceTree = "<group>";
+		};
 		568268462CAE8219000E364A = {
 			isa = PBXGroup;
 			children = (
-				568268512CAE8219000E364A /* LearningSprint */,
+				5613C3482CAED2DA00E42FB0 /* LearningSprint */,
 				568268502CAE8219000E364A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,9 +92,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				568268512CAE8219000E364A /* LearningSprint */,
 			);
 			name = LearningSprint;
 			packageProductDependencies = (
@@ -122,6 +139,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5613C34C2CAED2DA00E42FB0 /* LaunchScreen.storyboard in Resources */,
+				5613C34E2CAED2DA00E42FB0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,10 +151,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5613C3492CAED2DA00E42FB0 /* SceneDelegate.swift in Sources */,
+				5613C3562CAED40500E42FB0 /* ChatListTableViewCell.swift in Sources */,
+				5613C34A2CAED2DA00E42FB0 /* AppDelegate.swift in Sources */,
+				5613C3522CAED2F800E42FB0 /* ChatListViewController.swift in Sources */,
+				5613C34B2CAED2DA00E42FB0 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5613C3452CAED2DA00E42FB0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5613C3442CAED2DA00E42FB0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		568268632CAE821B000E364A /* Debug */ = {
