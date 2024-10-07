@@ -27,8 +27,8 @@ final class ChatListTableViewCell: UITableViewCell {
     private let addressTimeLabel: UILabel = {
         let label = UILabel()
         label.text = "사용자 주소·시간"
-        label.textColor = .black
-        label.font = .systemFont(ofSize: 16)
+        label.textColor = .systemGray2
+        label.font = .systemFont(ofSize: 14)
         return label
     }()
     
@@ -43,7 +43,7 @@ final class ChatListTableViewCell: UITableViewCell {
     private let profileHeaderStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
-        stackView.spacing = 4
+        stackView.spacing = 8
         stackView.alignment = .center
         stackView.distribution = .fill
         return stackView
@@ -100,6 +100,7 @@ extension ChatListTableViewCell {
             profileImageView.centerYAnchor.constraint(
                 equalTo: safeAreaLayoutGuide.centerYAnchor
             ),
+            profileImageView.widthAnchor.constraint(equalTo: profileImageView.heightAnchor),
             
             // MARK: - chatTextStackView Constraints
             chatTextStackView.topAnchor.constraint(
@@ -114,7 +115,6 @@ extension ChatListTableViewCell {
             chatTextStackView.trailingAnchor.constraint(
                 equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -50
             ),
-        
         ])
     }
 }
