@@ -69,6 +69,24 @@ final class ChatListTableViewCell: UITableViewCell {
     }
 }
 
+// MARK: - Public Interface
+extension ChatListTableViewCell {
+    func configureContents(
+        profileImage: UIImage?,
+        userName: String,
+        address: String = "대연동",
+        postTime: String,
+        chatPreview: String
+    ) {
+        if let profileImage {
+            profileImageView.image = profileImage
+        }
+        nameLabel.text = userName
+        addressTimeLabel.text = "\(address) · \(postTime)"
+        chatPreviewLabel.text = chatPreview
+    }
+}
+
 // MARK: - Configure UI
 extension ChatListTableViewCell {
     private func configureSubvies() {
