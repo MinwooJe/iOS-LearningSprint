@@ -94,6 +94,13 @@ extension ChatListViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - Configure TableView Delegate
+extension ChatListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+}
+
 // MARK: - Configure UI
 extension ChatListViewController {
     private func configureSubvies() {
