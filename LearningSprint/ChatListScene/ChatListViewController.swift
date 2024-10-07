@@ -9,7 +9,11 @@ import UIKit
 
 class ChatListViewController: UIViewController {
     private let tableView = UITableView()
-    var chatListArray = [ChatListModel]()
+    var chatListArray = [ChatListModel]() {
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
     let chatListDataSource = ChatListDataSource()
     
     override func viewDidLoad() {
@@ -30,7 +34,6 @@ extension ChatListViewController {
         
         chatListDataSource.chatListInfoPublisher = { [weak self] chatList in
             self?.chatListArray = chatList
-            self?.tableView.reloadData()
         }
     }
 }
