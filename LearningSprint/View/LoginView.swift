@@ -34,6 +34,18 @@ class LoginView: UIView {
         textField.spellCheckingType = .no
         textField.keyboardType = .emailAddress
         textField.isSecureTextEntry = true
+        
+        let passwordToggle = UIButton(type: .custom)
+        passwordToggle.frame = CGRect(x: 0.0, y: 0.0, width: 30, height: 30)
+        passwordToggle.setImage(UIImage(named: "eye_closed"), for: .normal)
+        passwordToggle.setImage(UIImage(named: "eye_open"), for: .selected)
+        passwordToggle.imageView?.contentMode = .scaleAspectFit
+
+        let rightViewContainer = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 30))
+        rightViewContainer.addSubview(passwordToggle)
+        textField.rightView = rightViewContainer
+        textField.rightViewMode = .always
+        
         return textField
     }()
 

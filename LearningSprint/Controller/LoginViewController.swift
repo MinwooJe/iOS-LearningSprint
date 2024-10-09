@@ -12,6 +12,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         configureInitialSetting()
         configureAddTarget()
+        setupPasswordToggle()
     }
 }
 
@@ -34,6 +35,17 @@ extension LoginViewController{
     func pushSignUpVC() {
         let signUpViewController = SignUpViewController()
         self.navigationController?.pushViewController(signUpViewController, animated: true)
+    }
+    
+    private func setupPasswordToggle() {
+        if let passwordToggle = loginView.passwordTextField.rightView?.subviews.first as? UIButton {
+            passwordToggle.addTarget(self, action: #selector(didTapPasswordToggle), for: .touchUpInside)
+        }
+    }
+        
+    @objc private func didTapPasswordToggle(_ sender: UIButton) {
+        sender.isSelected.toggle()
+        loginView.passwordTextField.isSecureTextEntry.toggle()
     }
     
     // 로그인 후 화면
