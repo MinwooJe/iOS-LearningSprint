@@ -67,10 +67,9 @@
 		5613C34F2CAED2DF00E42FB0 /* ChatListScene */ = {
 			isa = PBXGroup;
 			children = (
-				56F6B40A2CB2FC99007AB54B /* ChatListDataSource.swift */,
-				563DA8912CAEDB68004CE389 /* ChatListModel.swift */,
-				5613C3512CAED2F800E42FB0 /* ChatListViewController.swift */,
-				5613C3552CAED40500E42FB0 /* ChatListTableViewCell.swift */,
+				56C4942E2CC630F500E234C0 /* Models */,
+				56C4942D2CC630F000E234C0 /* Views */,
+				56C4942C2CC630E500E234C0 /* Controllers */,
 			);
 			path = ChatListScene;
 			sourceTree = "<group>";
@@ -107,6 +106,31 @@
 				56C494222CC6287B00E234C0 /* SignUpView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		56C4942C2CC630E500E234C0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5613C3512CAED2F800E42FB0 /* ChatListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		56C4942D2CC630F000E234C0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5613C3552CAED40500E42FB0 /* ChatListTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		56C4942E2CC630F500E234C0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				56F6B40A2CB2FC99007AB54B /* ChatListDataSource.swift */,
+				563DA8912CAEDB68004CE389 /* ChatListModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
