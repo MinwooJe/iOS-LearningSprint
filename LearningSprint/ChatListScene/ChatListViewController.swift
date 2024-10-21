@@ -8,10 +8,10 @@
 import UIKit
 
 class ChatListViewController: UIViewController {
-    private let tableView = UITableView()
-    var chatListArray = [ChatListModel]() {
+    private let chatListTableView = UITableView()
+    var chatListInfo = [ChatListModel]() {
         didSet {
-            self.tableView.reloadData()
+            self.chatListTableView.reloadData()
         }
     }
     let chatListDataSource = ChatListDataSource()
@@ -29,18 +29,18 @@ class ChatListViewController: UIViewController {
 extension ChatListViewController {
     private func configureInitialSetting() {
         view.backgroundColor = .white
-        tableView.dataSource = self
-        tableView.register(ChatListTableViewCell.self, forCellReuseIdentifier: "ChatListTableViewCell")
+        chatListTableView.dataSource = self
+        chatListTableView.register(ChatListTableViewCell.self, forCellReuseIdentifier: "ChatListTableViewCell")
         
         chatListDataSource.chatListInfoPublisher = { [weak self] chatList in
-            self?.chatListArray = chatList
+            self?.chatListInfo = chatList
         }
     }
 }
 
 // MARK: - Convert Data
 extension ChatListViewController {
-    private func parseTime(from timeString: String) -> String {
+    private func formattedPassedTime(from timeString: String) -> String {
         var resultTime: String = ""
         
         let dateFormatter = DateFormatter()
@@ -75,7 +75,7 @@ extension ChatListViewController {
 // MARK: - Configure TalbeView DataSource
 extension ChatListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return chatListArray.count
+        return chatListInfo.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -84,12 +84,12 @@ extension ChatListViewController: UITableViewDataSource {
             for: indexPath
         ) as? ChatListTableViewCell else { return UITableViewCell() }
         
-        let data = chatListArray[indexPath.row]
+        let data = chatListInfo[indexPath.row]
         
         cell.configureContents(
             profileImage: data.profileImage,
             userName: data.userName,
-            postTime: parseTime(from: data.time),
+            postTime: formattedPassedTime(from: data.time),
             chatPreview: data.chatPreviewText
         )
         
@@ -107,7 +107,7 @@ extension ChatListViewController: UITableViewDelegate {
 // MARK: - Configure UI
 extension ChatListViewController {
     private func configureSubvies() {
-        [tableView].forEach {
+        [chatListTableView].forEach {
             view.addSubview($0)
             $0.translatesAutoresizingMaskIntoConstraints = false
         }
@@ -116,16 +116,16 @@ extension ChatListViewController {
     private func configureLayout() {
         let safeArea = view.safeAreaLayoutGuide
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(
+            chatListTableView.topAnchor.constraint(
                 equalTo: safeArea.topAnchor
             ),
-            tableView.bottomAnchor.constraint(
+            chatListTableView.bottomAnchor.constraint(
                 equalTo: safeArea.bottomAnchor
             ),
-            tableView.leadingAnchor.constraint(
+            chatListTableView.leadingAnchor.constraint(
                 equalTo: safeArea.leadingAnchor
             ),
-            tableView.trailingAnchor.constraint(
+            chatListTableView.trailingAnchor.constraint(
                 equalTo: safeArea.trailingAnchor
             )
         ])
