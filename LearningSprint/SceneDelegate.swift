@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  LearningSprint
-//
-//  Created by 제민우 on 10/3/24.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -17,9 +10,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
-            
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = ViewController()
+        let loginViewController = LoginViewController()
+        let navigationController = UINavigationController(rootViewController: loginViewController)
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
 

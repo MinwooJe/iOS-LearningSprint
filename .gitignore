@@ -1,0 +1,28 @@
+# Xcode
+*.xcuserdatad/
+*.xcscmblueprint/
+*.xcodeproj/project.xcworkspace/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/xcshareddata/xcschemes/xcschememanagement.plist
+*.xcworkspace/
+DerivedData/
+build/
+*.ipa
+*.xcarchive
+*.ds_store
+*.swp
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+
+# CocoaPods
+Pods/
+
+# Carthage
+Carthage/Build/
+
+# Swift Package Manager
+.swiftpm
+Package.resolved
+SourcePackages/
+

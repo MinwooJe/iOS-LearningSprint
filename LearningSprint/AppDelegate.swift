@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  LearningSprint
-//
-//  Created by 제민우 on 10/3/24.
-//
-
 import UIKit
 
 @main
