@@ -8,14 +8,14 @@
 import UIKit
 
 class ChatListDataSource {
-    var chatList: [ChatListModel] = [] {
+    var chatList: [ChatListDTO] = [] {
         didSet {
             chatListInfoPublisher?(chatList)
         }
     }
     
     // MARK: - Output
-    var chatListInfoPublisher: (([ChatListModel]) -> Void)?
+    var chatListInfoPublisher: (([ChatListDTO]) -> Void)?
 }
 
 // MARK: - Input
@@ -23,13 +23,13 @@ class ChatListDataSource {
 extension ChatListDataSource {
     func fetchData() {
         chatList = [
-            ChatListModel(userName: "당근1", time: "2024-10-07T11:58:45.123+0900", chatPreviewText: "안녕하세요"),
-            ChatListModel(userName: "당근1", time: "2024-10-07T11:40:45.123+0900", chatPreviewText: "안녕하세요"),
-            ChatListModel(userName: "당근1", time: "2024-10-07T08:40:45.123+0900", chatPreviewText: "안녕하세요"),
-            ChatListModel(userName: "당근2", time: "2024-10-06T14:23:45.123+0900", chatPreviewText: "안녕하세요"),
-            ChatListModel(userName: "당근3", time: "2024-09-24T14:23:45.123+0900", chatPreviewText: "안녕하세요"),
-            ChatListModel(userName: "당근4", time: "2024-09-01T14:23:45.123+0900", chatPreviewText: "안녕하세요"),
-            ChatListModel(userName: "당근5", time: "2023-03-07T14:23:45.123+0900", chatPreviewText: "안녕하세요"),
+            ChatListDTO(userName: "당근1", time: "2024-10-07T11:58:45.123+0900", chatPreviewText: "안녕하세요"),
+            ChatListDTO(userName: "당근1", time: "2024-10-07T11:40:45.123+0900", chatPreviewText: "안녕하세요"),
+            ChatListDTO(userName: "당근1", time: "2024-10-07T08:40:45.123+0900", chatPreviewText: "안녕하세요"),
+            ChatListDTO(userName: "당근2", time: "2024-10-06T14:23:45.123+0900", chatPreviewText: "안녕하세요"),
+            ChatListDTO(userName: "당근3", time: "2024-09-24T14:23:45.123+0900", chatPreviewText: "안녕하세요"),
+            ChatListDTO(userName: "당근4", time: "2024-09-01T14:23:45.123+0900", chatPreviewText: "안녕하세요"),
+            ChatListDTO(userName: "당근5", time: "2023-03-07T14:23:45.123+0900", chatPreviewText: "안녕하세요"),
         ]
     }
 }

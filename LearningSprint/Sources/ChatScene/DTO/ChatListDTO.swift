@@ -1,5 +1,5 @@
 //
-//  ChatListModel.swift
+//  ChatListDTO.swift
 //  LearningSprint
 //
 //  Created by 제민우 on 10/3/24.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct ChatListModel {
+struct ChatListDTO {
     let profileImage: UIImage?
     let userName: String
     let address: String

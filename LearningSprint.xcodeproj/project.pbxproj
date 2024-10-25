@@ -16,11 +16,13 @@
 		56C494262CC6299400E234C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5613C3412CAED2DA00E42FB0 /* AppDelegate.swift */; };
 		56C494272CC6299400E234C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5613C3462CAED2DA00E42FB0 /* SceneDelegate.swift */; };
 		56C494282CC6299400E234C0 /* ChatListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F6B40A2CB2FC99007AB54B /* ChatListDataSource.swift */; };
-		56C494292CC6299400E234C0 /* ChatListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563DA8912CAEDB68004CE389 /* ChatListModel.swift */; };
+		56C494292CC6299400E234C0 /* ChatListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563DA8912CAEDB68004CE389 /* ChatListDTO.swift */; };
 		56C4942A2CC6299400E234C0 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5613C3512CAED2F800E42FB0 /* ChatListViewController.swift */; };
 		56C4942B2CC6299400E234C0 /* ChatListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5613C3552CAED40500E42FB0 /* ChatListTableViewCell.swift */; };
 		56F32E532CCB8DDB0031A8A0 /* MessageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F32E522CCB8DC20031A8A0 /* MessageCollectionViewCell.swift */; };
 		56F32E582CCB8E0C0031A8A0 /* MessageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F32E572CCB8E050031A8A0 /* MessageContentView.swift */; };
+		56F32E5A2CCB8E660031A8A0 /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F32E592CCB8E660031A8A0 /* ChatRoomViewController.swift */; };
+		56F32E5E2CCB8F7B0031A8A0 /* Untitled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F32E5D2CCB8F790031A8A0 /* Untitled.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +33,7 @@
 		5613C3462CAED2DA00E42FB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5613C3512CAED2F800E42FB0 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
 		5613C3552CAED40500E42FB0 /* ChatListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListTableViewCell.swift; sourceTree = "<group>"; };
-		563DA8912CAEDB68004CE389 /* ChatListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListModel.swift; sourceTree = "<group>"; };
+		563DA8912CAEDB68004CE389 /* ChatListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListDTO.swift; sourceTree = "<group>"; };
 		5682684F2CAE8219000E364A /* LearningSprint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningSprint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56C4941C2CC6287200E234C0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		56C4941D2CC6287200E234C0 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +41,8 @@
 		56C494222CC6287B00E234C0 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		56F32E522CCB8DC20031A8A0 /* MessageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCollectionViewCell.swift; sourceTree = "<group>"; };
 		56F32E572CCB8E050031A8A0 /* MessageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageContentView.swift; sourceTree = "<group>"; };
+		56F32E592CCB8E660031A8A0 /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
+		56F32E5D2CCB8F790031A8A0 /* Untitled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Untitled.swift; sourceTree = "<group>"; };
 		56F6B40A2CB2FC99007AB54B /* ChatListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,7 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				56F6B40A2CB2FC99007AB54B /* ChatListDataSource.swift */,
-				563DA8912CAEDB68004CE389 /* ChatListModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 		56F32E502CCB8D860031A8A0 /* ChatScene */ = {
 			isa = PBXGroup;
 			children = (
+				56F32E5C2CCB8EB90031A8A0 /* DTO */,
 				5613C34F2CAED2DF00E42FB0 /* ChatListScene */,
 				56F32E512CCB8DA40031A8A0 /* ChatRoomScene */,
 			);
@@ -215,6 +219,7 @@
 		56F32E542CCB8DE10031A8A0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				56F32E592CCB8E660031A8A0 /* ChatRoomViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -233,6 +238,15 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		56F32E5C2CCB8EB90031A8A0 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				56F32E5D2CCB8F790031A8A0 /* Untitled.swift */,
+				563DA8912CAEDB68004CE389 /* ChatListDTO.swift */,
+			);
+			path = DTO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,9 +324,11 @@
 			files = (
 				56C494262CC6299400E234C0 /* AppDelegate.swift in Sources */,
 				56C494272CC6299400E234C0 /* SceneDelegate.swift in Sources */,
+				56F32E5E2CCB8F7B0031A8A0 /* Untitled.swift in Sources */,
 				56C494282CC6299400E234C0 /* ChatListDataSource.swift in Sources */,
-				56C494292CC6299400E234C0 /* ChatListModel.swift in Sources */,
+				56C494292CC6299400E234C0 /* ChatListDTO.swift in Sources */,
 				56F32E532CCB8DDB0031A8A0 /* MessageCollectionViewCell.swift in Sources */,
+				56F32E5A2CCB8E660031A8A0 /* ChatRoomViewController.swift in Sources */,
 				56C4942A2CC6299400E234C0 /* ChatListViewController.swift in Sources */,
 				56F32E582CCB8E0C0031A8A0 /* MessageContentView.swift in Sources */,
 				56C4942B2CC6299400E234C0 /* ChatListTableViewCell.swift in Sources */,
